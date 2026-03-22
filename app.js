@@ -1,7 +1,7 @@
 const categoriesList = document.querySelector('#categories');
 const categoryItems = categoriesList.querySelectorAll('.item');
 
-console.log(`У списке ${categoryItems.length} категории.`);
+console.log(`В списке ${categoryItems.length} категории.`);
 
 categoryItems.forEach(item => {
   const title = item.querySelector('h2').textContent;
@@ -52,7 +52,8 @@ const gallery = document.querySelector('#gallery');
 
 const markup = images
   .map(
-    ({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`
+    ({ url, alt }) =>
+      `<li class="gallery-item"><img class="gallery-img" src="${url}" alt="${alt}"></li>`
   )
   .join('');
 
